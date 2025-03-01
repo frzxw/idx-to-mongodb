@@ -17,17 +17,17 @@ from concurrent.futures import ThreadPoolExecutor
 
 # Constants
 # File system constants
-DOWNLOAD_DIR = Path("downloads")
-EXTRACTED_DIR = Path("extracted")
+DOWNLOAD_DIR = Path("temp/downloads")
+EXTRACTED_DIR = Path("temp/extracted")
 CHUNK_SIZE = 8192  # Download chunk size in bytes
 
 # MongoDB constants
 DEFAULT_MONGODB_URI = "mongodb://localhost:27017/"
-DEFAULT_DB_NAME = "idx_financial_reports"
-COLLECTION_NAME = "Q12024"
+DEFAULT_DB_NAME = "financial_reports"
+COLLECTION_NAME = "reports"
 
 # CSV file constants
-CSV_FILE_PATH = "example.csv"
+CSV_FILE_PATH = "data/reports.csv"
 
 # File type constants
 INSTANCE_FILE_EXTENSIONS = ['.xbrl', '.xml']
@@ -83,8 +83,8 @@ class FinancialReportProcessor:
         self.db_name = db_name
         
         # Ensure directories exist
-        DOWNLOAD_DIR.mkdir(exist_ok=True)
-        EXTRACTED_DIR.mkdir(exist_ok=True)
+        DOWNLOAD_DIR.mkdir(parents=True, exist_ok=True)
+        EXTRACTED_DIR.mkdir(parents=True, exist_ok=True)
         
     def process_csv_file(self, csv_filepath: str) -> None:
         """
