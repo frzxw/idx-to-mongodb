@@ -1,4 +1,4 @@
-# filepath: idx-to-mongodb/idx-to-mongodb/src/main.py
+# filepath: idx-to-mongodb/idx-to-mongodb/main.py
 from src.processor.financial_report_processor import FinancialReportProcessor
 import csv
 import logging
