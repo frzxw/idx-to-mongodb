@@ -1,0 +1,6 @@
+ticker,url
+AAPL,https://example.com/reports/AAPL_report.zip
+GOOGL,https://example.com/reports/GOOGL_report.zip
+MSFT,https://example.com/reports/MSFT_report.zip
+AMZN,https://example.com/reports/AMZN_report.zip
+TSLA,https://example.com/reports/TSLA_report.zip
