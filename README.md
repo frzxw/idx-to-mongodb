@@ -1,6 +1,6 @@
-# Financial Report Processor
+# IDX to MongoDB
 
-This project is designed to process financial reports from the Indonesia Stock Exchange (IDX). It automates the downloading, extraction, and parsing of financial report data, storing the results in a MongoDB database.
+This project is designed to automate downloading, extracting, and processing Indonesia Stock Exchange (IDX) financial reports. The system pulls XBRL documents from provided URLs, parses the structured financial data, and stores it in MongoDB for further analysis. Built with Python using libraries such as Selenium for download automation and lxml for XBRL parsing, with multi-threaded processing for improved efficiency.
 
 ## Project Structure
 
